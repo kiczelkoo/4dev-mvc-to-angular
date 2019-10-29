@@ -1,10 +1,7 @@
 package com.craftsmanship.miniangular.web.rest;
 
-import java.util.Optional;
-
 import com.craftsmanship.miniangular.logic.DataProvider;
 import com.craftsmanship.miniangular.model.RecipeModel;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

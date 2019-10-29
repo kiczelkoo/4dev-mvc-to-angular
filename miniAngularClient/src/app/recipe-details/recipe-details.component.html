@@ -1,0 +1,18 @@
+<div class="container-fluid px-lg-5" *ngIf="recipeModel">
+  <h1 class="with-light-font-color">{{recipeModel.name}}</h1>
+  <div class="row">
+    <div class="col-4 py-3 px-lg-2">
+      <h2 class="with-light-font-color">{{recipeModel.category}}</h2>
+      <ul class="with-bigger-content-font with-light-font-color">
+        <li class="with-light-font-color" *ngFor="let ingredient of recipeModel.ingredients">{{ingredient.productName +
+          ', ' + ingredient.amount}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-8 py-3 px-lg-2">
+      <h2 class="with-light-font-color">Sposób przygotowania</h2>
+      <p class="with-bigger-content-font with-light-font-color">{{recipeModel.description}}</p>
+    </div>
+
+  </div>
+</div>

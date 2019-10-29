@@ -1,0 +1,20 @@
+<div *ngIf="recipesModel">
+  <table class="table table-dark table-borderless table-hover">
+    <thead>
+    <tr>
+      <th scope="col"> Nazwa</th>
+      <th scope="col"> Kategoria</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="!recipesModel">
+      <td class="with-light-font-color with-bigger-content-font" colspan="2"> Brak wyników</td>
+    </tr>
+    <tr *ngFor="let recipe of recipesModel">
+      <td scope="row"><a class="with-light-font-color with-bigger-content-font"
+                         href="/recipe-details?id={{recipe.id}}"><span>{{recipe.name}}</span></a></td>
+      <td><span class="with-bigger-content-font">{{recipe.category}}</span></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

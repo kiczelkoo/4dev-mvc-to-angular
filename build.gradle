@@ -45,3 +45,14 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDirs "miniAngularClient/dist"
+        }
+    }
+}
+
+processResources.dependsOn('miniAngularClient:build')
+
+
