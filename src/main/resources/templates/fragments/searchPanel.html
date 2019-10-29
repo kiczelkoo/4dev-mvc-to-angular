@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Craftsmanship - miniAngular</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<div class="col-4 py-3 px-lg-2" th:fragment="search-panel">
+    <h2 class="with-light-font-color">Wybierz składniki z listy</h2>
+    <select name="product" form="recipe"
+            class="js-example-basic-multiple with-light-font-color with-dark-background"
+            aria-invalid="false"
+            multiple="multiple"
+            size="10">
+        <option class="with-bigger-content-font" th:each="pr, itemStat: ${products}" th:value="${pr.name}" th:text="${pr.name}"
+                th:selected="${selectedProducts != null and #lists.contains(selectedProducts, pr.name)}">
+        </option>
+    </select>
+    <form action="#" th:action="@{/recipes}" id="recipe">
+        <button type="submit" class="btn btn-primary btn-light btn-lg">Submit</button>
+    </form>
+</div>
+
+</body>
